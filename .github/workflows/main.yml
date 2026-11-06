@@ -2,7 +2,6 @@ name: Quantum Lottery Automated Report
 
 on:
   schedule:
-    # Τρέχει κάθε Τρίτη και Παρασκευή στις 22:30 UTC
     - cron: '30 22 * * 2,5'
   workflow_dispatch:
 
@@ -25,6 +24,7 @@ jobs:
 
       - name: Run prediction and send email
         env:
+          PYTHONPATH: .
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
