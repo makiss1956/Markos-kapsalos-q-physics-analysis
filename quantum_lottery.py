@@ -30,7 +30,9 @@ from typing import List, Tuple
 # ώστε το script να τρέχει και ως `python3 quantum_lottery.py` από οποιονδήποτε φάκελο
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from quantum_lottery import __version__
+# ΔΙΟΡΘΩΣΗ: Σταθερή δήλωση έκδοσης για αποφυγή κυκλικής εισαγωγής (circular import)
+__version__ = "2.0.0"
+
 from quantum_lottery.backtest import run_backtest
 from quantum_lottery.classic_engine import ClassicEngine
 from quantum_lottery.comparison import compare_prediction
