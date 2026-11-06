@@ -1,0 +1,14 @@
+# μυστικά & τοπικά
+.env
+*.db
+
+# έξοδοι που παράγονται τοπικά
+logs/*.log
+logs/*.log.*
+logs/cron.log
+reports/backtest_checkpoint.json
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
